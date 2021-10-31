@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="MinecraftChatColourGenerator.Controls.ColourTranslationControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MinecraftChatColourGenerator.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" 
+             d:DesignWidth="400"
+             FontFamily="Consolas">
+    <Grid>
+        <TextBlock x:Name="PreviewBlock" VerticalAlignment="Center" Text="Red" Padding="2" HorizontalAlignment="Left" Width="100"/>
+        <TextBox x:Name="ValueBox" Text="Red" Margin="100,0,106,0" Padding="3" VerticalContentAlignment="Center"/>
+        <Button Content="Pick Colour" HorizontalAlignment="Right" Width="101" Click="Button_Click"/>
+    </Grid>
+</UserControl>
