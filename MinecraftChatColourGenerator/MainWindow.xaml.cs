@@ -1,25 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using REghZyFramework.Utilities;
 
 namespace MinecraftChatColourGenerator {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window {
+        public TranslationMapWindow TranslationMap { get; }
+
+        public RCSConfig Config { get; }
+
         public MainWindow() {
             InitializeComponent();
+            this.Config = new RCSConfig("config");
+            this.TranslationMap = new TranslationMapWindow();
+            this.DataContext = new MainViewModel(this.TranslationMap.TranslationMap);
+        }
+
+        private void ShowTranslationWindow_Click(object sender, RoutedEventArgs e) {
+            this.TranslationMap.Show();
         }
     }
 }

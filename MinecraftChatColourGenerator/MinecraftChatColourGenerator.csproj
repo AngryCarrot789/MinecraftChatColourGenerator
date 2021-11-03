@@ -38,6 +38,8 @@
     <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -56,12 +58,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Controls\ColourPickerDialog.xaml.cs">
-      <DependentUpon>ColourPickerDialog.xaml</DependentUpon>
+    <Compile Include="AddColourTranslationWindow.xaml.cs">
+      <DependentUpon>AddColourTranslationWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ColourTranslationModel.cs" />
+    <Compile Include="Controls\ColourFlowDocument.cs" />
+    <Compile Include="Controls\ColourTextBox.cs" />
     <Compile Include="Controls\ColourTranslationControl.xaml.cs">
       <DependentUpon>ColourTranslationControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IColourProvider.cs" />
+    <Compile Include="IoC.cs" />
+    <Compile Include="MainViewModel.cs" />
     <Compile Include="Themes\ColourfulDarkTheme.xaml.cs">
       <DependentUpon>ColourfulDarkTheme.xaml</DependentUpon>
     </Compile>
@@ -75,10 +83,18 @@
       <DependentUpon>LightTheme.xaml</DependentUpon>
     </Compile>
     <Compile Include="Themes\ThemesController.cs" />
+    <Compile Include="TranslationMapViewModel.cs" />
     <Compile Include="TranslationMapWindow.xaml.cs">
       <DependentUpon>TranslationMapWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="Controls\ColourPickerDialog.xaml">
+    <Compile Include="Utilities\BaseView.cs" />
+    <Compile Include="Utilities\BaseViewModel.cs" />
+    <Compile Include="Utilities\Command.cs" />
+    <Compile Include="Utilities\CommandParam.cs" />
+    <Compile Include="Utilities\RCSConfig.cs" />
+    <Compile Include="Utilities\ScrollViewerHelper.cs" />
+    <Compile Include="Utilities\String\StringExtensions.cs" />
+    <Page Include="AddColourTranslationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

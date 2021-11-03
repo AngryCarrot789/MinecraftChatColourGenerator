@@ -9,8 +9,8 @@
              d:DesignWidth="400"
              FontFamily="Consolas">
     <Grid>
-        <TextBlock x:Name="PreviewBlock" VerticalAlignment="Center" Text="Red" Padding="2" HorizontalAlignment="Left" Width="100"/>
-        <TextBox x:Name="ValueBox" Text="Red" Margin="100,0,106,0" Padding="3" VerticalContentAlignment="Center"/>
-        <Button Content="Pick Colour" HorizontalAlignment="Right" Width="101" Click="Button_Click"/>
+        <TextBox x:Name="PreviewBlock" Text="Red" Padding="2" VerticalContentAlignment="Center" Background="Transparent" BorderBrush="Transparent" Margin="0,0,210,0"/>
+        <TextBox x:Name="ValueBox" Text="Char" Margin="0,0,155,0" Padding="3" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="50" MaxLength="1"/>
+        <Rectangle x:Name="ColourPreview" HorizontalAlignment="Right" Width="150" MouseDown="ColourPreview_MouseDown" Cursor="Hand"/>
     </Grid>
 </UserControl>

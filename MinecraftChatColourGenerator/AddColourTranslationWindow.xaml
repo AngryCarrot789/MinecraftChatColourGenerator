@@ -1,0 +1,21 @@
+﻿<Window x:Class="MinecraftChatColourGenerator.AddColourTranslationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MinecraftChatColourGenerator"
+        mc:Ignorable="d"
+        Title="AddColourTranslationWindow" Height="231" Width="302"
+        Style="{DynamicResource CustomToolWindowStyle}">
+    <Grid>
+        <Label Focusable="False" Content="Colour Name" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Focusable="False" Content="Colour Code" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+        <Label Focusable="False" Content="Colour (click the area below to pick one)" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
+        <TextBox Focusable="True" x:Name="ColourName" Text="Colour Name" Margin="95,10,10,0" VerticalAlignment="Top" Height="26" VerticalContentAlignment="Center" Padding="4 2 2 2"/>
+        <TextBox Focusable="True" x:Name="ColourChar" Text="Code" Margin="95,41,10,0" VerticalAlignment="Top" Height="26" VerticalContentAlignment="Center" Padding="4 2 2 2"/>
+        <Rectangle Focusable="False" x:Name="ColourPreview1" Margin="10,103,10,41" MouseDown="ColourPreview1_MouseDown"/>
+        <Rectangle Focusable="False" x:Name="ColourPreview2" Margin="10,129,170,10" MouseDown="ColourPreview2_MouseDown"/>
+        <Button Focusable="False" Content="OK" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="75" Height="26" Click="OK_Click"/>
+        <Button Focusable="False"  Content="Cancel" HorizontalAlignment="Right" Margin="0,0,90,10" VerticalAlignment="Bottom" Width="75" Height="26" Click="Cancel_Click"/>
+    </Grid>
+</Window>

@@ -4,9 +4,27 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MinecraftChatColourGenerator"
+        xmlns:controls="clr-namespace:MinecraftChatColourGenerator.Controls"
+        d:DataContext="{d:DesignInstance Type=local:TranslationMapViewModel}"
         mc:Ignorable="d"
-        Title="TranslationMapWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="TranslationMapWindow"
+        Height="500"
+        Width="400"
+        Style="{DynamicResource CustomToolWindowStyle}" Background="{DynamicResource ContainerBackground}">
+    <Grid Margin="10">
+        <Border Background="{DynamicResource BackgroundColour}" BorderBrush="{DynamicResource ContainerBorder}" BorderThickness="1 1 1 0" Margin="0,0,0,30">
+            <ItemsControl ItemsSource="{Binding Translations, UpdateSourceTrigger=PropertyChanged}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <controls:ColourTranslationControl ColourName="{Binding ColourName, UpdateSourceTrigger=PropertyChanged}"
+                                                           Colour="{Binding Colour, UpdateSourceTrigger=PropertyChanged}"
+                                                           Character="{Binding Character, UpdateSourceTrigger=PropertyChanged}"
+                                                           IsEnabled="{Binding IsEditable, UpdateSourceTrigger=PropertyChanged}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Border>
+
+        <Button Content="Click to add a colour..." VerticalAlignment="Bottom" Height="30" BorderThickness="1 1 1 1" BorderBrush="{DynamicResource ContainerBorder}" Click="Button_Click"/>
     </Grid>
 </Window>

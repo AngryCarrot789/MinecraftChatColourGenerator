@@ -2709,6 +2709,7 @@
 
     <!-- RichTextBox -->
     <Style TargetType="{x:Type RichTextBox}">
+        <Setter Property="MinWidth" Value="10"/>
         <Style.Resources>
             <Style x:Key="{x:Type FlowDocument}" TargetType="{x:Type FlowDocument}">
                 <Setter Property="OverridesDefaultStyle" Value="true"/>
@@ -2724,7 +2725,6 @@
                 </Style.Triggers>
             </Style>
         </Style.Resources>
-        <Setter Property="MinWidth" Value="10"/>
         <Style.BasedOn>
             <StaticResource ResourceKey="{x:Type TextBoxBase}"/>
         </Style.BasedOn>
